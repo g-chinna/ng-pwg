@@ -63,7 +63,7 @@ export class AppComponent {
       const index = Math.floor(Math.random() * validChars.length);
       generatedPassword += validChars[index];
     }
-    this.password = "Your password is " + generatedPassword;
+    this.password = "Your Password is " + generatedPassword;
   }
 
 }

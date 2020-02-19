@@ -42,39 +42,51 @@
   <!-- Resources -->
   <br/>
 
-  <div class="pwd">
-<div>
-    <label>Length </label>
-    <input (input)="onChangeLength($event.target.value)"/>
-</div>
+<div class="container">
+  <div class="columns is-centered">
+  <div class="box column is-one-thrid">
 
-<div>
-  <input (change)="onChangeUseLetters()" type="checkbox" />
-  <label >Use Letters</label>
+    <div class="field"> 
+      
+      <input class="input" placeholder="Enter Length" (input)="onChangeLength($event.target.value)"/>
+    </div>
+
+
+<div class="field">
+  <input class="checkbox" (change)="onChangeUseLetters()" type="checkbox" />
+  <label class="control"> Use Letters</label>
   
 </div>
 
-<div>
-  <input (change)="onChangeUseNumbers()" type="checkbox" />
-  <label >Use Numbers</label>
+<div class="field">
+  <input class="checkbox" (change)="onChangeUseNumbers()" type="checkbox" />
+  <label class="control"> Use Numbers</label>
   
 </div>
 
-<div>
-  <input (change)="onChangeUseSymbols()" type="checkbox" />
-  <label >Use Symbols</label>
-  
+<div class="field">
+  <input class="checkbox" (change)="onChangeUseSymbols()" type="checkbox" />
+  <label class="control"> Use Symbols</label>
 </div>
-<div>
-  <button (click)="onButtonClick()">Generate!</button>
+
+
+
+<div class="control"> 
+  <button class="button is-primary" [disabled]="!(length && (includeLetters || includeNumbers || includeSymbols))"
+  (click)="onButtonClick()">Generate!</button>
   
 </div>
 <br/>
 <div>
-  <label>{{ password }}</label> 
+  <label class="label">{{ password }}</label> 
   
 </div>
+
 </div>
+</div>
+</div>
+
+
 
   <!-- Next Steps -->
 
