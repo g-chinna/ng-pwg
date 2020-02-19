@@ -45,32 +45,33 @@
   <div class="pwd">
 <div>
     <label>Length </label>
-    <input type="text"/>
+    <input (input)="onChangeLength($event.target.value)"/>
 </div>
 
 <div>
-  <input type="checkbox" />
-  <label>Use Letters</label>
+  <input (change)="onChangeUseLetters()" type="checkbox" />
+  <label >Use Letters</label>
   
 </div>
 
 <div>
-  <input type="checkbox" />
-  <label>Use Numbers</label>
+  <input (change)="onChangeUseNumbers()" type="checkbox" />
+  <label >Use Numbers</label>
   
 </div>
 
 <div>
-  <input type="checkbox" />
-  <label>Use Symbols</label>
+  <input (change)="onChangeUseSymbols()" type="checkbox" />
+  <label >Use Symbols</label>
   
 </div>
 <div>
-  <button type="submit">Generate!</button>
+  <button (click)="onButtonClick()">Generate!</button>
+  
 </div>
-
+<br/>
 <div>
-  <label>Your Password is </label>
+  <label>{{ password }}</label> 
   
 </div>
 </div>
