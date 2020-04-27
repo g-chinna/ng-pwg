@@ -3,5 +3,6 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.2.
 
 ## Development server
+![](images/Password_Generator_v1.03.png)
 
 ![](ng-pwg/images/Password_Generator_v1.03.png)
